@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/style/style.css" type="text/css"/>
+  <title>CRUD com Upload de Imagem</title>
+</head>
+<body>
+  <main class="container">
+    <h1>Converta imagem para WEBP</h1>
+    <form action="/src/uploads" method="POST" enctype="multipart/form-data">
+      <label for="name">Nome da imagem:</label>
+      <input type="text" name="name" placeholder="Digite o nome da imagem"/>
+  
+      <label for="width">Tamanho da imagem:</label>
+      <input type="number" name="width" placeholder="Selecione o tamanho da imagem"/>
+  
+      <label for="quality">Qualidade da imagem:</label>
+      <input type="range" name="quality"/>
+  
+      <input type="file" name="imagem" accept="image/*" required/>
+  
+      <button type="submit">Converter</button>
+    </form>
+  </main>
+</body>
+</html>
